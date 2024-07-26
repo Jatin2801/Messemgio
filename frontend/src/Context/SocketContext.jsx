@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("https://messengio.onrender.com/", {
+			const socket = io("http://localhost:10000", {
 				query: {
 					userId: authUser._id,
 				},

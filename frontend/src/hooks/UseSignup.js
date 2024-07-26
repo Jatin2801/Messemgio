@@ -22,7 +22,7 @@ const UseSignup = () => {
         }
         //all is well, navigate to login page, and let user login with the newly created credentials
         toast.success('Successfully Signed up')
-        window.setTimeout(function(){ window.location = "/"; },1200); 
+        window.setTimeout(function(){ window.location = "/login"; },1200); 
     }catch (error) {
             toast.error(error.message)
         } finally {

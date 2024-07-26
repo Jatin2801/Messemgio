@@ -19,7 +19,7 @@ const UserLogin = () => {
         }
         if(res.ok){
               toast.success('Successfully Logged in')
-              window.setTimeout(function(){ window.location = "/Chat"; },1000); 
+              window.setTimeout(function(){ window.location = "/"; },1000); 
         }
     } catch (error) {
         console.log(error);

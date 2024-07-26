@@ -15,7 +15,7 @@ const UseLogout = () => {
         }
         toast.success('Logged Out Successfully')
         localStorage.removeItem("chat-user")
-        window.setTimeout(function(){ window.location = "/"; },1200); 
+        window.setTimeout(function(){ window.location = "/login"; },1200); 
         return 
       
     } catch (error) {
