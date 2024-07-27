@@ -31,8 +31,13 @@ app.use(express.static(path.join(__dirname,"/frontend/dist"))) //used to serve s
 app.get("*",(req,res)=>{
     res.sendFile(path.join(__dirname,"frontend","dist","index.html"))
 })
-
+function myTimer() {
+   const res = fetch('https://messengio.onrender.com/')
+   .then(res => console.log('Fetched URL'))
+   .catch(err => console.error('Fetch error:', err));
+  }
 server.listen(PORT,()=>{ // this is run as soon as server starts 
     connettomongo()
-    console.log(`server running on ${PORT}` // we will make change in package.json in scripts to be able to run server.js on commnd npm run server in terminal
-)}) 
+    console.log(`server running on ${PORT}`) // we will make change in package.json in scripts to be able to run server.js on commnd npm run server in terminal
+    setInterval(myTimer,5000)    
+}) 

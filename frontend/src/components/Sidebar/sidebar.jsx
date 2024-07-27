@@ -19,6 +19,7 @@ await logout();
         <Conversations/> 
         <div className='mt-auto'>
       <RiLogoutBoxLine className='w-6 h-6 text-black cursor-pointer' onClick={handleLogout} />
+      <p className='text-black font-semibold'>Logout</p>
         </div>
     </div>
   )
